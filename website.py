@@ -18,7 +18,7 @@ with open(r"models/tokenizer.pkl", 'rb') as handle:
 
 # Download necessary NLTK resources
 nltk.download('stopwords')
-nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # Set up stopwords and stemmer
 stop_words = set(stopwords.words('english'))
