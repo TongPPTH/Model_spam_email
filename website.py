@@ -66,8 +66,8 @@ def main():
                 st.markdown(f"**Prediction Probability:** {probability:.4f}")
                 st.markdown(f"**Predicted Label:** :{'red' if predicted_label == 'Spam' else 'green'}[{predicted_label}]")
             
-            except:
-                st.warning('Can not analyze this language')
+            except Exception as e:
+                st.warning(f"Error: {str(e)}")
         else:
             st.warning("Please enter some text to analyze.")
 
