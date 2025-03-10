@@ -3,7 +3,7 @@ from googletrans import Translator
 async def translate_bulk(text):
     async with Translator() as translator:
         translations = await translator.translate([text], dest='en', src='auto')
-        for translation in translations:
+        # for translation in translations:
             # print(translation.src)
             # print(translation.origin, ' -> ', translation.text)
             
