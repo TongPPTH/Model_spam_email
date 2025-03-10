@@ -4,8 +4,8 @@ async def translate_bulk(text):
     async with Translator() as translator:
         translations = await translator.translate([text], dest='en', src='auto')
         for translation in translations:
-            print(translation.src)
-            print(translation.origin, ' -> ', translation.text)
+            # print(translation.src)
+            # print(translation.origin, ' -> ', translation.text)
             
         return translation.text
 
@@ -20,4 +20,4 @@ I would like to inform you that
 To unsubscribe from this group and stop receiving emails from it, send an email to aai65+unsubscribe@informatics.buu.ac.th."""
     
     translated = asyncio.run(translate_bulk(origin))
-    print(translated == origin)
+    # print(translated == origin)
